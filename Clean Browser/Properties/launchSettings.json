@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Clean Browser (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Clean Browser (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
