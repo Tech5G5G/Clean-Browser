@@ -27,6 +27,7 @@ namespace Clean_Browser
             ExtendsContentIntoTitleBar = true;
             SetTitleBar(titleBar);
             AppWindow.TitleBar.PreferredHeightOption = TitleBarHeightOption.Collapsed;
+            AppWindow.SetIcon("Assets/Clean Browser.ico");
 
             Activated += (s, e) => UpdateButtonBounds();
             SizeChanged += Window_SizeChanged;
@@ -129,7 +130,7 @@ namespace Clean_Browser
                 return;
             }
 
-            if (!sideBarContainsPointer && (!force || sideBar.Width == 0) && (raisedByButton || pinButton.IsChecked == false))
+            if (!sideBarContainsPointer && !force && sideBar.Width == (pin ? 0 : 300) && (raisedByButton || pinButton.IsChecked == false))
                 AnimationBuilder.Create().Size(Axis.X, pin ? 300 : 0, pin ? 0 : 300, duration: TimeSpan.FromMilliseconds(300), layer: FrameworkLayer.Xaml).Start(sideBar);
         }
         private void SideBarOpener_PointerEntered(object sender, PointerRoutedEventArgs e)

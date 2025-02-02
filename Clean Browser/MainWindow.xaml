@@ -119,13 +119,12 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <Grid x:Name="titleBar" Height="32" Background="Transparent">
-                <Image Width="16" Height="16" Margin="8,0,0,0" Source="Assets/StoreLogo.png" HorizontalAlignment="Left" />
                 <TextBlock x:Name="AppTitle" 
                            Text="Clean Browser" 
                            Style="{StaticResource CaptionTextBlockStyle}"
                            Grid.Column="1"
                            VerticalAlignment="Center"
-                           Margin="32,0,0,0"/>
+                           Margin="8,0,0,0"/>
             </Grid>
             <StackPanel Orientation="Horizontal" Grid.Column="1" Height="32">
                 <Button x:Name="minimizeButton" Height="32" Width="46" CornerRadius="0" BorderThickness="0" Background="Transparent" ToolTipService.ToolTip="Minimize" ToolTipService.Placement="Top">
